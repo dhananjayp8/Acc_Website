@@ -21,12 +21,19 @@
 // export default Header;
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg'; // Adjust path based on your folder structure
-// import './App.css'; // Optional if you want custom styles
 
 function Header() {
+  // State to track whether the dropdown is open or not
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // Toggle dropdown visibility
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white">
       <div className="container-fluid">
@@ -39,6 +46,9 @@ function Header() {
             width="120"
             height="auto"
           />
+          <span className="ms-2 fw-bold" style={{ fontSize: '24px', color: 'black' }}>
+            Apna <span style={{ color: '#ff9900' }}>Competitive Corner</span>
+          </span>
         </Link>
 
         {/* Button for responsive navbar */}
@@ -76,30 +86,33 @@ function Header() {
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
-                id="navbarDropdown"
+                id="newCoursesDropdown"
                 role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                aria-haspopup="true"
+                aria-expanded={dropdownOpen ? 'true' : 'false'}
+                onClick={toggleDropdown}
               >
                 New Courses
               </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <Link className="dropdown-item" to="/courses/sigma">
-                    Sigma 4.0 (Aug Batch)
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/courses/delta">
-                    Delta 5.0 (Aug Development Batch)
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/courses/cpp-dsa">
-                    C++ DSA
-                  </Link>
-                </li>
-              </ul>
+              {dropdownOpen && (
+                <ul className="dropdown-menu" style={{ color : 'blue' }} aria-labelledby="newCoursesDropdown">
+                  <li>
+                    <Link className="dropdown-item" to="/courses/sigma">
+                      Sigma 4.0 (Aug Batch)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/courses/delta">
+                      Delta 5.0 (Aug Development Batch)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/courses/cpp-dsa">
+                      C++ DSA
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
 
             {/* Log in */}
@@ -111,7 +124,7 @@ function Header() {
 
             {/* Sign up */}
             <li className="nav-item">
-              <Link className="btn btn-primary mx-2" to="/signup">
+              <Link className="btn btn-outline-primary mx-2" style={{ color: 'blue' }} to="/signup">
                 Sign up
               </Link>
             </li>

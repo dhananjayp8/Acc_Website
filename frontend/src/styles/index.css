@@ -90,7 +90,10 @@
   text-decoration: underline;
 } */
 /* src/index.css */
-
+*{
+  font-weight: 600;
+  
+}
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent to show the background image */
@@ -122,3 +125,4 @@
 .navbar a:hover {
   text-decoration: underline;
 }
+
