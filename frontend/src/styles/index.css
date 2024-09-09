@@ -90,10 +90,7 @@
   text-decoration: underline;
 } */
 /* src/index.css */
-*{
-  font-weight: 600;
-  
-}
+
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent to show the background image */
@@ -101,6 +98,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 600;
 }
 
 .logo {
@@ -126,3 +124,26 @@
   text-decoration: underline;
 }
 
+/* Ensure dropdown items are displayed vertically */
+.navbar .dropdown-menu {
+  display: block;
+  flex-direction: column;
+  padding: 0;
+  list-style: none;
+  min-width: 200px;
+  background-color: rgb(88, 88, 218);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  font-size: 16px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: black;
+}

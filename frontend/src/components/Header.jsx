@@ -26,10 +26,9 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg'; // Adjust path based on your folder structure
 
 function Header() {
-  // State to track whether the dropdown is open or not
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  // Toggle dropdown visibility
+  // Function to toggle the dropdown visibility
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
@@ -40,14 +39,14 @@ function Header() {
         {/* Logo */}
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            className='logo'
+            className="logo"
             src={logo}
             alt="Logo"
             width="120"
             height="auto"
           />
           <span className="ms-2 fw-bold" style={{ fontSize: '24px', color: 'black' }}>
-            Apna <span style={{ color: '#ff9900' }}>Competitive Corner</span>
+            Apna <span style={{ color: '#0d6efd' }}>Competitive Corner</span>
           </span>
         </Link>
 
@@ -84,35 +83,33 @@ function Header() {
             {/* New Courses Dropdown */}
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link"
                 href="#"
-                id="newCoursesDropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded={dropdownOpen ? 'true' : 'false'}
-                onClick={toggleDropdown}
+                onClick={toggleDropdown} // Toggle on click
               >
                 New Courses
               </a>
-              {dropdownOpen && (
-                <ul className="dropdown-menu" style={{ color : 'blue' }} aria-labelledby="newCoursesDropdown">
-                  <li>
-                    <Link className="dropdown-item" to="/courses/sigma">
-                      Sigma 4.0 (Aug Batch)
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/courses/delta">
-                      Delta 5.0 (Aug Development Batch)
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/courses/cpp-dsa">
-                      C++ DSA
-                    </Link>
-                  </li>
-                </ul>
-              )}
+              <ul
+                className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}
+                aria-labelledby="newCoursesDropdown"
+                style={{ display: dropdownOpen ? 'block' : 'none' }} // Show only if dropdownOpen is true
+              >
+                <li>
+                  <Link className="dropdown-item" to="/courses/sigma">
+                    Sigma 4.0 (Aug Batch)
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/courses/delta">
+                    Delta 5.0 (Aug Development Batch)
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/courses/cpp-dsa">
+                    C++ DSA
+                  </Link>
+                </li>
+              </ul>
             </li>
 
             {/* Log in */}
