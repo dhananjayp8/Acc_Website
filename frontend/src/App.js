@@ -6,6 +6,7 @@ import Signup from './components/Signup';
 import Header from './components/Header';
 import './styles/index.css'
 import Section from './components/Section';
+import Services from './components/Service';
 function App() {
   return (
     <Router>
@@ -15,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<Section />} /> 
+          <Route path="/" element={[<Section />,<Services/>]} /> 
         </Routes>
       </div>
     </Router>

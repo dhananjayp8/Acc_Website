@@ -6,7 +6,7 @@ function Section() {
     <section className="d-flex align-items-center justify-content-between p-4">
       {/* Left Side (Text or Other Content) */}
       <div className="left-content">
-        <h2>Welcome to Apna Competitive Corner!</h2>
+        <h2 className='welcome-title'>Welcome to Apna Competitive Corner!</h2>
         <p className='desc'>
           Your journey to success starts here. Explore our courses designed to help you succeed in competitive exams.
         </p>
