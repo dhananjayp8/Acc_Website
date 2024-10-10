@@ -4,7 +4,7 @@ function Contact() {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start">
+        <div className="flex flex-col md:flex-row justify-between items-start space-x-0 md:space-x-16">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h1 className="text-4xl font-bold mb-4">Contact Apna Competitive Corner</h1>
             <p className="text-gray-600 mb-6">
@@ -44,11 +44,11 @@ function Contact() {
                   className="w-full border border-gray-300 rounded p-2 h-24"
                 ></textarea>
               </div>
-              {/* Apply custom color style */}
+              {/* Update button color */}
               <button
                 type="submit"
                 className="text-white rounded px-4 py-2"
-                style={{ backgroundColor: '#457b9d' }}
+                style={{ backgroundColor: '#457b9d' , borderRadius: '20px'}}
               >
                 Submit your information now
               </button>
