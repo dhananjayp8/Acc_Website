@@ -95,9 +95,12 @@ function Navbar() {
         <a href="#" className="text-black hover:underline text-xl">
           Resources
         </a>
-        <a href="#" className="text-black hover:underline text-xl">
+        {/* <a href="#" className="text-black hover:underline text-xl">
           Contact
-        </a>
+        </a> */}
+        <Link to="/contact-us" className="block text-black mb-2 text-xl">
+            Contact
+          </Link>
         <a href="#" className="text-black hover:underline text-xl">
           Store
         </a>
@@ -123,9 +126,12 @@ function Navbar() {
           <a href="#" className="block text-black mb-2 text-xl">
             Resources
           </a>
-          <a href="#" className="block text-black mb-2 text-xl">
+          <Link to="/contact-us" className="block text-black mb-2 text-xl">
             Contact
-          </a>
+          </Link>
+          {/* <a href="#" className="block text-black mb-2 text-xl">
+            Contact
+          </a> */}
           <a href="#" className="block text-black text-xl">
             Store
           </a>

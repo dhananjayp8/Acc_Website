@@ -44,8 +44,12 @@ function Contact() {
                   className="w-full border border-gray-300 rounded p-2 h-24"
                 ></textarea>
               </div>
-              {/* Correct the button color */}
-              <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white rounded px-4 py-2">
+              {/* Apply custom color style */}
+              <button
+                type="submit"
+                className="text-white rounded px-4 py-2"
+                style={{ backgroundColor: '#457b9d' }}
+              >
                 Submit your information now
               </button>
             </form>

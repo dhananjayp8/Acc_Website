@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Services from './components/Services';
 import Testimonial from './components/Testimonial';
 import Course from './components/Course'; // Import the Course component
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           </>
         } />
         <Route path="/course" element={<Course />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
