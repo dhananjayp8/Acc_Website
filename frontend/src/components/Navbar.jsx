@@ -1,5 +1,6 @@
 
 // import React, { useState } from "react";
+// import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 // import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome icons
 // import logo from '../assets/logo.png';
 
@@ -17,18 +18,21 @@
 //       </div>
 //       {/* Increase space between items and increase font size */}
 //       <div className="flex items-center space-x-12 hidden md:flex">
-//         <a href="#" className="text-black hover:underline text-xl">
+//         <Link to="/" className="text-black hover:underline text-xl">
 //           Home
-//         </a>
-//         <a href="#" className="text-black hover:underline text-xl">
+//         </Link>
+//         <Link to="/course" className="text-black hover:underline text-xl">
 //           Courses
-//         </a>
+//         </Link>
 //         <a href="#" className="text-black hover:underline text-xl">
 //           Resources
 //         </a>
-//         <a href="#" className="text-black hover:underline text-xl">
+//         {/* <a href="#" className="text-black hover:underline text-xl">
 //           Contact
-//         </a>
+//         </a> */}
+//         <Link to="/contact-us" className="block text-black mb-2 text-xl">
+//             Contact
+//           </Link>
 //         <a href="#" className="text-black hover:underline text-xl">
 //           Store
 //         </a>
@@ -45,18 +49,21 @@
 //       </div>
 //       {isOpen && (
 //         <div className="absolute top-16 right-4 bg-white shadow-lg rounded-lg p-4 md:hidden">
-//           <a href="#" className="block text-black mb-2 text-xl">
+//           <Link to="/" className="block text-black mb-2 text-xl">
 //             Home
-//           </a>
-//           <a href="#" className="block text-black mb-2 text-xl">
+//           </Link>
+//           <Link to="/course" className="block text-black mb-2 text-xl">
 //             Courses
-//           </a>
+//           </Link>
 //           <a href="#" className="block text-black mb-2 text-xl">
 //             Resources
 //           </a>
-//           <a href="#" className="block text-black mb-2 text-xl">
+//           <Link to="/contact-us" className="block text-black mb-2 text-xl">
 //             Contact
-//           </a>
+//           </Link>
+//           {/* <a href="#" className="block text-black mb-2 text-xl">
+//             Contact
+//           </a> */}
 //           <a href="#" className="block text-black text-xl">
 //             Store
 //           </a>
@@ -67,6 +74,7 @@
 // }
 
 // export default Navbar;
+
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome icons
@@ -85,7 +93,7 @@ function Navbar() {
         />
       </div>
       {/* Increase space between items and increase font size */}
-      <div className="flex items-center space-x-12 hidden md:flex">
+      <div className="flex items-center space-x-8 hidden md:flex"> {/* Adjusted space-x to 8 */}
         <Link to="/" className="text-black hover:underline text-xl">
           Home
         </Link>
@@ -95,12 +103,9 @@ function Navbar() {
         <a href="#" className="text-black hover:underline text-xl">
           Resources
         </a>
-        {/* <a href="#" className="text-black hover:underline text-xl">
+        <Link to="/contact-us" className="text-black hover:underline text-xl">
           Contact
-        </a> */}
-        <Link to="/contact-us" className="block text-black mb-2 text-xl">
-            Contact
-          </Link>
+        </Link>
         <a href="#" className="text-black hover:underline text-xl">
           Store
         </a>
@@ -129,10 +134,7 @@ function Navbar() {
           <Link to="/contact-us" className="block text-black mb-2 text-xl">
             Contact
           </Link>
-          {/* <a href="#" className="block text-black mb-2 text-xl">
-            Contact
-          </a> */}
-          <a href="#" className="block text-black text-xl">
+          <a href="#" className="block text-black mb-2 text-xl">
             Store
           </a>
         </div>
