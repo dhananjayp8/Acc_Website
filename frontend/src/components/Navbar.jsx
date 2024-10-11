@@ -100,9 +100,9 @@ function Navbar() {
         <Link to="/course" className="text-black hover:underline text-xl">
           Courses
         </Link>
-        <a href="#" className="text-black hover:underline text-xl">
+        <Link to="/resources" className="text-black hover:underline text-xl">
           Resources
-        </a>
+        </Link>
         <Link to="/contact-us" className="text-black hover:underline text-xl">
           Contact
         </Link>
@@ -128,9 +128,12 @@ function Navbar() {
           <Link to="/course" className="block text-black mb-2 text-xl">
             Courses
           </Link>
-          <a href="#" className="block text-black mb-2 text-xl">
+          <Link to="/resources" className="block text-black mb-2 text-xl">
             Resources
-          </a>
+          </Link>
+          {/* <a href="#" className="block text-black mb-2 text-xl">
+            Resources
+          </a> */}
           <Link to="/contact-us" className="block text-black mb-2 text-xl">
             Contact
           </Link>

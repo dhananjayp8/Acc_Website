@@ -7,6 +7,7 @@ import Services from './components/Services';
 import Testimonial from './components/Testimonial';
 import Course from './components/Course'; // Import the Course component
 import Contact from './components/Contact';
+import Resource from './components/Resources';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         } />
         <Route path="/course" element={<Course />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/resources" element={<Resource />} />
       </Routes>
       <Footer />
     </Router>
