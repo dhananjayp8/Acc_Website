@@ -1,7 +1,7 @@
 
 import React from 'react';
 import mock from '../assets/mocktest.png';
-import studymaterials from '../assets/study1.png';
+import studymaterials from '../assets/study.png';
 import guidance from '../assets/guidance.png';
 import sessions from '../assets/sessions.png';
 
